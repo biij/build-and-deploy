@@ -81,7 +81,7 @@ describe('the calculation controller', function () {
       });
     });
 
-    /*describe('minus operator', function () {
+    describe('minus operator', function () {
       var operator = 'minus';
 
       it('should calculate 2 - 2 = 0', function () {
@@ -125,7 +125,7 @@ describe('the calculation controller', function () {
 
         expect(ctrl.result).toBe(10);
       });
-    });*/
+    });
 
     describe('divide operator', function () {
       var operator = 'divide';
@@ -173,10 +173,10 @@ describe('the calculation controller', function () {
       });
     });
 
-    describe('multiply operator', function(){
+    describe('multiply operator', function () {
       var operator = 'multiply';
 
-      it('should not be implemented', function(){
+      it('should not be implemented', function () {
         var ctrl = createController();
         ctrl.calculate(10, 10, operator);
 
@@ -184,28 +184,28 @@ describe('the calculation controller', function () {
       });
     });
 
-    it('undefined operator should not be implemented', function(){
+    it('undefined operator should not be implemented', function () {
       var ctrl = createController();
       ctrl.calculate(10, 10, undefined);
 
       expect(ctrl.result).toBe('Operator not implemented');
     });
 
-    it('null operator should not be implemented', function(){
+    it('null operator should not be implemented', function () {
       var ctrl = createController();
       ctrl.calculate(10, 10, null);
 
       expect(ctrl.result).toBe('Operator not implemented');
     });
 
-    it('unknown operator should not be implemented', function(){
+    it('unknown operator should not be implemented', function () {
       var ctrl = createController();
       ctrl.calculate(10, 10, 'unknown');
 
       expect(ctrl.result).toBe('Operator not implemented');
     });
 
-    it('square operator should not be implemented', function(){
+    it('square operator should not be implemented', function () {
       var ctrl = createController();
       ctrl.calculate(10, 10, 'square');
 
