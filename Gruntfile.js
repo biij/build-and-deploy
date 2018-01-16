@@ -83,6 +83,10 @@ module.exports = function (grunt) {
     }
   };
 
+  var jsHintConfig = {
+    all: ['src/calcApp.module.js', 'src/calcCtrl.js'],
+  };
+
   var gruntConfig = {
     sass: sassConfig,
     concat: concatConfig,
@@ -115,10 +119,6 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'karma:unit'
   ]);
-
-  var jsHintConfig = {
-    all: ['src/calcApp.module.js', 'src/calcCtrl.js'],
-  };
 
   grunt.registerTask('lint', [
     'jshint:all'
